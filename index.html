@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimyo Detektivi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="game-container">
+        <header class="topbar">
+            <div class="logo">
+                <div class="logo-icon">🧪</div>
+                <div>
+                    <h1>KIMYO <span>DETEKTIVI</span></h1>
+                    <p>Sirli moddalar olamiga xush kelibsiz!</p>
+                </div>
+            </div>
+            <button class="sound-btn" id="soundBtn" aria-label="Ovozni yoqish yoki o‘chirish">
+                🔊
+            </button>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>🏆 BALL</span>
+                <strong id="score">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>🥇 REKORD</span>
+                <strong id="record">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>📍 BOSQICH</span>
+                <strong id="level">1/10</strong>
+            </div>
+            <div class="stat-card timer-card">
+                <span>⏱ VAQT</span>
+                <strong id="timer">20</strong>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-label">
+                <span>O‘yin jarayoni</span>
+                <span id="progressText">0 / 10</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="game-panel" id="gamePanel">
+            <div class="case-header">
+                <span class="case-badge">🔎 DETEKTIV ISHI</span>
+                <span class="difficulty" id="difficulty">Oson</span>
+            </div>
+
+            <div class="mystery-area">
+                <div class="molecule molecule-left">⚛️</div>
+                <div class="mystery-icon" id="mysteryIcon">🧪</div>
+                <div class="molecule molecule-right">🔬</div>
+            </div>
+
+            <div class="question-area">
+                <p class="question-number" id="questionNumber">1-ISH / 10</p>
+                <h2 id="question">Sirli moddani aniqlang!</h2>
+                <p class="question-description" id="description">
+                    Laboratoriyadagi ma’lumotlarni tekshiring va to‘g‘ri javobni toping.
+                </p>
+            </div>
+
+            <div class="clue-box">
+                <div class="clue-title">📋 DETEKTIV MA’LUMOTI</div>
+                <p id="clue">Bu modda haqida ma’lumotlar shu yerda ko‘rsatiladi.</p>
+            </div>
+
+            <div class="answers" id="answers"></div>
+
+            <div class="hint-area">
+                <button class="hint-btn" id="hintBtn">💡 Maslahat olish <span>(−5 ball)</span></button>
+                <p id="hintText" class="hint-text"></p>
+            </div>
+
+            <div class="feedback" id="feedback" aria-live="polite"></div>
+            <button class="next-btn" id="nextBtn" hidden>Keyingi bosqich ➜</button>
+        </section>
+
+        <section class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-icon">🕵️‍♂️</div>
+            <h2>Kimyo detektivi</h2>
+            <p>
+                Laboratoriyadagi sirli moddalarni aniqlashga tayyormisan?
+                Har bir topshiriqni yech, ball to‘pla va eng yaxshi detektiv bo‘l!
+            </p>
+            <div class="welcome-features">
+                <span>⏱ 20 soniya</span>
+                <span>🧩 10 ta topshiriq</span>
+                <span>🏆 Rekord</span>
+            </div>
+            <button class="start-btn" id="startBtn">🚀 O‘yinni boshlash</button>
+        </section>
+
+        <section class="result-screen" id="resultScreen" hidden>
+            <div class="result-icon" id="resultIcon">🏆</div>
+            <h2 id="resultTitle">Ajoyib natija!</h2>
+            <p id="resultMessage">Sen barcha topshiriqlarni bajarding.</p>
+            <div class="final-score">
+                <span>Yig‘ilgan ball</span>
+                <strong id="finalScore">0</strong>
+            </div>
+            <p class="record-message" id="recordMessage"></p>
+            <button class="start-btn" id="restartBtn">🔄 Qayta o‘ynash</button>
+        </section>
+
+        <footer>
+            <span>🧪 KIMYO DETEKTIVI</span>
+            <span>Bilim — eng kuchli qurol!</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
